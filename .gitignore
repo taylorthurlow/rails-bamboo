@@ -16,6 +16,9 @@
 /.bundle
 /vendor
 
+# sqlite3 databases
+db/*.sqlite3
+
 # dev environment
 *.sublime-workspace
 
