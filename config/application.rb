@@ -24,5 +24,14 @@ module RailsBamboo
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+
+    # Use the responders controller from the responders gem
+    config.app_generators.scaffold_controller :responders_controller
+
+    # Add bower components to asset path
+    # config.assets.paths << "#{Rails.root}/app/assets/bower_components"
+
+    # Autoload files in lib directory
+    config.autoload_paths << "#{Rails.root}/lib"
   end
 end

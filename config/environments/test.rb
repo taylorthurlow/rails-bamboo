@@ -33,4 +33,10 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # Configure bullet
+  config.after_initialize do
+    Bullet.enable = true                  # enable bullet
+    Bullet.raise = true                   # raise errors when failing
+  end
 end
