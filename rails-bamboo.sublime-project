@@ -1,0 +1,20 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+			"folder_exclude_patterns": [
+				".bundle",
+				"vendor",
+				"log",
+				"bin",
+		        "tmp",
+		        ".circleci"
+			],
+			"file_exclude_patterns": [
+				".byebug_history",
+        		".keep"
+			]
+		}
+	]
+}
