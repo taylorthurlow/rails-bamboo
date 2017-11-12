@@ -1,6 +1,6 @@
 <img align="right" src="https://user-images.githubusercontent.com/761640/32694981-648f38c4-c704-11e7-9e9c-64db6e2bdd74.png" alt="rails-bamboo panda">
 
-# rails-bamboo
+# rails-bamboo <img align="right" src="https://img.shields.io/badge/rails-5.1.4-green.svg" /><img align="right" src="https://img.shields.io/badge/ruby-2.4.2-green.svg" /><img align="right" src="https://img.shields.io/travis/taylorthurlow/rails-bamboo/master.svg" />
 `rails-bamboo` was created as a way to make it easier to start a new Rails project. In addition to including some gems that I find worth using in every project, I've made some changes to the default scaffolding templates and included a basic application layout with navigation bar.
 
 ## gems
