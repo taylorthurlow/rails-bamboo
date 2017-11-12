@@ -12,6 +12,15 @@
  *
  *= require normalize-rails
  *= require font-awesome
- *= require_tree .
- *= require_self
  */
+
+@import 'variables';
+
+@import 'mixins/flexbox';
+@import 'mixins/vhc';
+@import 'mixins/hide-text';
+@import 'mixins/site-nav-item';
+
+@import 'layout';
+@import 'navigation';
+@import 'tables';
