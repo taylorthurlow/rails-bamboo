@@ -32,6 +32,7 @@ group :test do
 end
 
 group :development, :test do
+  gem 'bootsnap'                                      # load your rails server quicker using bytecode caching and $PATH caching
   gem 'bullet', '~> 5.6.1'                            # find n+1 queries and unused eager loading
   gem 'byebug'                                        # a console debugger
   gem 'dotenv-rails'                                  # load environment variables from .env

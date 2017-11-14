@@ -24,7 +24,7 @@ A static code analysis tool which is able to analyze Rails applications for comm
 This gem provides a small, toggleable button in the corner of your browser which displays page loading speed information. Clicking it reveals an in-depth breakdown of what components of the page render took the most time. Database queries making your page loads slow? This little guy will clue you in.
 
 ### [`rubocop`](https://github.com/bbatsov/rubocop)
-Rubocop is another static code analysis tool used for enforcing guidelines from the [ruby style guide](https://github.com/bbatsov/ruby-style-guide). Every style rule is configurable and toggleable, and as someone who has trouble remembering to follow a style guide, this gem combined with a lint plugin for Sublime Text is an absolute godsend. Never in my life have I wanted to spend so much time arguing with people about single-quotes versus double-quotes, though. I guess that's the tradeoff.
+Rubocop is another static code analysis tool used for enforcing guidelines from the [Ruby style guide](https://github.com/bbatsov/ruby-style-guide). Every style rule is configurable and toggleable, and as someone who has trouble remembering to follow a style guide, this gem combined with a lint plugin for Sublime Text is an absolute godsend. Never in my life have I wanted to spend so much time arguing with people about single-quotes versus double-quotes, though. I guess that's the tradeoff.
 
 ### [`traceroute`](https://github.com/amatsuda/traceroute)
 A cool little rake task that analyzes your routes and will tell you if you have any unused routes, or if any of your controller action methods are unreachable.
@@ -35,11 +35,14 @@ This gem allows you to place a `<% console %>` tag in your views, or use `consol
 ### [`mocha`](https://github.com/freerange/mocha)
 A Ruby library for mocking and stubbing in tests. Supports full and partial mocking, with built-in support for `MiniTest` and `Test::Unit`. `RSpec` includes a Mocha adapter, so you can use it there too. But `MiniTest` is better, so... use it.
 
+### [`bootsnap`](https://github.com/Shopify/bootsnap)
+Rails apps don't always start quickly, and `bootsnap` aims to fix that. By caching the contents of directories in your `$PATH` and caching your Ruby bytecode, the time it takes to spin up your app can decrease dramatically, often by 50-75%. I've excluded this gem from the `production` environment because the caching does use more memory - and in memory-dependent environments like Heroku, this can often be really undesired. If the app is running in an environment where some extra memory usage is OK, then it is definitely worth also using it in production. It's worth noting that this gem is set to be shipped with Rails `5.2`.
+
 ### [`bullet`](https://github.com/flyerhzm/bullet)
 A tool which helps notify you when it thinks you might be able to reduce the number of database queries you're making. It'll let you know if you should add eager loading, or if you're using eager loading when you shouldn't.
 
 ### [`byebug`](https://github.com/deivid-rodriguez/byebug)
-A simple but feature-rich ruby debugger.
+A simple but feature-rich Ruby debugger.
 
 ### [`dotenv-rails`](https://github.com/bkeepers/dotenv)
 A tool which allows environment variables to be set using a text file in a development environment. Deployed applications often rely on environment variables for API keys and other things which shouldn't be placed in the source code or in version control. This gem allows you to configure your application to use environment variables, and during development, read them from a file in your project directory. Handy for keeping secrets.
