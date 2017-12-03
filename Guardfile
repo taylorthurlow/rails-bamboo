@@ -8,7 +8,7 @@ guard 'livereload' do
   watch(%r{(app|vendor)(/assets/\w+/(.+\.(css|scss|js|html|png|jpg))).*}) { |m| "/assets/#{m[3]}" }
 end
 
-guard :minitest, all_on_start: false, env: { 'NO_COVERAGE' => 'true' } do
+guard :minitest, all_on_start: false, spring: 'bin/rails test', env: { 'NO_COVERAGE' => 'true' } do
   watch(%r{^app/controllers/application_controller\.rb$}) { 'test/controllers' }
   watch(%r{^lib/(.+)\.rb$}) { |m| "test/lib/#{m[1]}_test.rb" }
   watch(%r{^test/.+_test\.rb$})
