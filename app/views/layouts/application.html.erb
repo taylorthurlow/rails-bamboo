@@ -8,7 +8,7 @@
   </head>
 
   <body>
-    <% if Rails.env.development? and ENV['HIDE_DEV_BANNER'] == 'false' %>
+    <% if Rails.env.development? and ENV['HIDE_DEV_BANNER'] != 'true' %>
       <%= render partial: 'layouts/dev_header' %>
     <% end %>
 
