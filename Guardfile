@@ -5,7 +5,7 @@ guard 'livereload' do
   watch(%r{test/.+\.(js)})
   watch(%r{config/locales/.+\.yml})
   # Rails Assets Pipeline
-  watch(%r{(app|vendor)(/assets/\w+/(.+\.(css|js|html|png|jpg))).*}) { |m| "/assets/#{m[3]}" }
+  watch(%r{(app|vendor)(/assets/\w+/(.+\.(css|scss|js|html|png|jpg))).*}) { |m| "/assets/#{m[3]}" }
 end
 
 guard :minitest, all_on_start: false, env: { 'NO_COVERAGE' => 'true' } do
