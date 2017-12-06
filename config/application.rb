@@ -32,7 +32,7 @@ module RailsBamboo
     # config.assets.paths << "#{Rails.root}/app/assets/bower_components"
 
     # Autoload files in lib directory
-    config.autoload_paths << "#{Rails.root}/lib"
+    config.eager_load_paths << "#{Rails.root}/lib"
 
     # Configure default Rails generators
     config.generators do |g|
