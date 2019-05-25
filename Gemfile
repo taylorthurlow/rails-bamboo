@@ -19,7 +19,8 @@ group :development do
   gem 'binding_of_caller'                             # execution context info on better error pages
   gem 'brakeman', require: false                      # find common security vulnerabilities
   gem 'rack-mini-profiler', require: false            # profile page loading and display load time analysis
-  gem 'rubocop', require: false                       # help adhere to ruby syntax and best practices
+  gem 'rufo'                                          # an opinionated Ruby formatter
+  gem 'solargraph'                                    # a Ruby language server for your editor/IDE
   gem 'spring'                                        # speeds up development by keeping your application running in the background
   gem 'spring-watcher-listen', '~> 2.0.0'             # use the Listen gem to find filesystem changes instead of polling the filesystem
   gem 'traceroute'                                    # find unused routes and unreachable action methods
