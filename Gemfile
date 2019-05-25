@@ -6,7 +6,7 @@ gem "bootsnap"                                        # Load your Rails server q
 gem "font-awesome-rails"                              # Awesome set of GPL friendly vector icons
 gem "normalize-rails"                                 # Integrate normalize.css with the Rrails asset pipeline
 gem "puma"                                            # Use the puma application server
-gem "rails", "5.2.3"                                  # A web application development framework for Ruby
+gem "rails", "6.0.0.rc1"                              # A web application development framework for Ruby
 gem "sassc-rails"                                     # Use SCSS for stylesheets
 gem "sqlite3"                                         # Use SQLite3 as the default database
 gem "turbolinks"                                      # Make navigating your web application faster by preloading pages
