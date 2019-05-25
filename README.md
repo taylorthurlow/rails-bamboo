@@ -1,6 +1,6 @@
 <img align="right" src="https://user-images.githubusercontent.com/761640/32694981-648f38c4-c704-11e7-9e9c-64db6e2bdd74.png" alt="rails-bamboo panda">
 
-# rails-bamboo <img align="right" src="https://img.shields.io/badge/rails-5.2.3-green.svg" /><img align="right" src="https://img.shields.io/badge/ruby-2.6.3-green.svg" /><img align="right" src="https://img.shields.io/travis/taylorthurlow/rails-bamboo/master.svg" />
+# rails-bamboo <img align="right" src="https://img.shields.io/badge/rails-6.0.0.rc1-green.svg" /><img align="right" src="https://img.shields.io/badge/ruby-2.6.3-green.svg" /><img align="right" src="https://img.shields.io/travis/taylorthurlow/rails-bamboo/master.svg" />
 
 `rails-bamboo` was created as a way to make it easier to start a new Rails project. In addition to including some gems that I find worth using in every project, I've made some changes to the default scaffolding templates and included a basic application layout with navigation bar.
 
@@ -38,25 +38,9 @@ A cool little rake task that analyzes your routes and will tell you if you have 
 
 This gem allows you to place a `<% console %>` tag in your views, or use `console` in your controllers, to enable a small rails console at the bottom of the page you're on. It can be handy to play around in the view context when you aren't exactly sure what's going on with a page. If you opt out of using the aforementioned `better_errors`, you'll also get one of these consoles on every error page. The console isn't always super helpful, though - it's not always run in the scope that you expect it to. Nevertheless, it comes in handy.
 
-### [`mocha`](https://github.com/freerange/mocha)
-
-A Ruby library for mocking and stubbing in tests. Supports full and partial mocking, with built-in support for `MiniTest` and `Test::Unit`. `RSpec` includes a Mocha adapter, so you can use it there too. But `MiniTest` is better, so... use it.
-
-### [`bootsnap`](https://github.com/Shopify/bootsnap)
-
-Rails apps don't always start quickly, and `bootsnap` aims to fix that. By caching the contents of directories in your `$PATH` and caching your Ruby bytecode, the time it takes to spin up your app can decrease dramatically, often by 50-75%. I've excluded this gem from the `production` environment because the caching does use more memory - and in memory-dependent environments like Heroku, this can often be really undesired. If the app is running in an environment where some extra memory usage is OK, then it is definitely worth also using it in production. It's worth noting that this gem is set to be shipped with Rails `5.2`.
-
 ### [`bullet`](https://github.com/flyerhzm/bullet)
 
 A tool which helps notify you when it thinks you might be able to reduce the number of database queries you're making. It'll let you know if you should add eager loading, or if you're using eager loading when you shouldn't.
-
-### [`byebug`](https://github.com/deivid-rodriguez/byebug)
-
-A simple but feature-rich Ruby debugger.
-
-### [`dotenv-rails`](https://github.com/bkeepers/dotenv)
-
-A tool which allows environment variables to be set using a text file in a development environment. Deployed applications often rely on environment variables for API keys and other things which shouldn't be placed in the source code or in version control. This gem allows you to configure your application to use environment variables, and during development, read them from a file in your project directory. Handy for keeping secrets.
 
 ### [`faker`](https://github.com/stympy/faker)
 
@@ -65,3 +49,7 @@ Faker is the best way to generate random (but sensible) seed data. With an ever-
 ### [`guard`](https://github.com/guard/guard)
 
 A tool which allows you to automate tasks when files or directories are modified. I use this in combination with [`guard-minitest`](https://github.com/guard/guard-minitest). When `guard` is running, it will automatically run the applicable tests when you save a source file. Additionally, [`guard-livereload`](https://github.com/guard/guard-livereload) can hook into a [browser extension](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en) and automatically reload the page when you edit your view files.
+
+### [`rufo`](https://github.com/ruby-formatter/rufo)
+
+An opinionated formatter for Ruby files. Ever get in a "discussion" with a coworker about what kind of syntax to use? Double- or single-quoted strings? Never fear, Rufo will make the decision for you. It's fast, and has almost no configuration options. Set it to format on save, and forget it.
