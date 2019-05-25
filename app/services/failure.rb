@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class Failure < Response
   def success?
-    return false
+    false
   end
 end

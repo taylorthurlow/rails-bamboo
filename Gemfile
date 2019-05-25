@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source "https://rubygems.org"
 
 gem "font-awesome-rails"                              # awesome set of GPL friendly vector icons
@@ -33,7 +35,7 @@ group :development, :test do
   gem "bullet"                                        # find n+1 queries and unused eager loading
   gem "byebug"                                        # a console debugger
   gem "dotenv-rails"                                  # load environment variables from .env
-  gem 'faker'                                         # handy library for generating all kinds of fake data
+  gem "faker"                                         # handy library for generating all kinds of fake data
   gem "guard"                                         # run custom rules when files or directories are modified
   gem "guard-livereload", require: false              # reload browser when view files are modified (requires LiveReload browser ext.)
   gem "guard-minitest"                                # contextually re-run tests when saving test files
