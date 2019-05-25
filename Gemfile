@@ -27,7 +27,7 @@ end
 
 group :test do
   gem "capybara"                                      # Capybara system testing DSL
-  gem "chromedriver-helper"                           # Run system tests in Chrome
+  gem "webdrivers"                                    # Run system tests in Chrome
   gem "selenium-webdriver"                            # Run system tests with a Selenium backend
   gem "simplecov", require: false                     # Code test coverage reports
   gem "webmock"                                       # Prevent remote network connections in tests

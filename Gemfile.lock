@@ -58,8 +58,6 @@ GEM
       zeitwerk (~> 2.1, >= 2.1.4)
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
-    archive-zip (0.12.0)
-      io-like (~> 0.3.0)
     ast (2.4.0)
     backport (1.0.0)
     better_errors (2.5.1)
@@ -87,9 +85,6 @@ GEM
       xpath (~> 3.2)
     childprocess (1.0.1)
       rake (< 13.0)
-    chromedriver-helper (2.1.1)
-      archive-zip (~> 0.10)
-      nokogiri (~> 1.8)
     coderay (1.1.2)
     concurrent-ruby (1.1.5)
     crack (0.4.3)
@@ -141,7 +136,6 @@ GEM
     http_parser.rb (0.6.0)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
-    io-like (0.3.0)
     jaro_winkler (1.5.2)
     json (2.2.0)
     kramdown (1.17.0)
@@ -319,6 +313,10 @@ GEM
       activemodel (>= 6.0.0.a)
       bindex (>= 0.4.0)
       railties (>= 6.0.0.a)
+    webdrivers (3.9.4)
+      nokogiri (~> 1.6)
+      rubyzip (~> 1.0)
+      selenium-webdriver (~> 3.0)
     webmock (3.5.1)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
@@ -341,7 +339,6 @@ DEPENDENCIES
   brakeman
   bullet
   capybara
-  chromedriver-helper
   factory_bot_rails
   faker
   font-awesome-rails
@@ -368,6 +365,7 @@ DEPENDENCIES
   turbolinks
   uglifier
   web-console
+  webdrivers
   webmock
 
 BUNDLED WITH
