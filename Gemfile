@@ -1,43 +1,47 @@
-source 'https://rubygems.org'
+# frozen_string_literal: true
 
-# Uncomment this line to force bundler to check the ruby version
-# ruby '2.4.1'
+source "https://rubygems.org"
 
-# gem 'bcrypt'                                          # allows ActiveModel has_secure_password, use for user login
-gem 'font-awesome-rails'                              # awesome set of GPL friendly vector icons
-gem 'normalize-rails'                                 # integrate normalize.css with rails asset pipeline
-gem 'puma', '~> 3.7'                                  # use the puma application server
-gem 'rails', '5.1.4'                                  # a web application development framework for ruby
-gem 'responders'                                      # easier controller responses
-gem 'sass-rails', '~> 5.0.3'                          # use SCSS for stylesheets
-gem 'sqlite3'                                         # use SQLite3 as the default database
-gem 'turbolinks', '~> 5.0.0'                          # make navigating your web application faster by preloading pages
-gem 'uglifier'                                        # a ruby wrapper for the UglifyJS javascript compressor
+gem "bootsnap"                                # Load your Rails server quicker using bytecode caching and $PATH caching
+gem "font-awesome-rails"                      # Awesome set of GPL friendly vector icons
+gem "normalize-rails"                         # Integrate normalize.css with the Rrails asset pipeline
+gem "puma"                                    # Use the puma application server
+gem "rails", "6.0.0.rc1"                      # A web application development framework for Ruby
+gem "sassc-rails"                             # Use SCSS for stylesheets
+gem "sqlite3"                                 # Use SQLite3 as the default database
+gem "turbolinks"                              # Make navigating your web application faster by preloading pages
+gem "uglifier"                                # a Ruby wrapper for the UglifyJS javascript compressor
 
 group :development do
-  gem 'better_errors'                                 # better, more useful rails error pages
-  gem 'binding_of_caller'                             # execution context info on better error pages
-  gem 'brakeman', require: false                      # find common security vulnerabilities
-  gem 'rack-mini-profiler', require: false            # profile page loading and display load time analysis
-  gem 'rubocop', require: false                       # help adhere to ruby syntax and best practices
-  gem 'spring'                                        # speeds up development by keeping your application running in the background
-  gem 'spring-watcher-listen', '~> 2.0.0'             # use the Listen gem to find filesystem changes instead of polling the filesystem
-  gem 'traceroute'                                    # find unused routes and unreachable action methods
-  gem 'web-console'                                   # in-page console by using <% console %> in views or controllers
+  gem "better_errors"                         # Better Rails error pages
+  gem "binding_of_caller"                     # Execution context info on better_errors pages
+  gem "brakeman", require: false              # Find common security vulnerabilities
+  gem "rack-mini-profiler", require: false    # Profile page loading and display load time analysis
+  gem "rufo"                                  # An opinionated Ruby formatter
+  gem "solargraph"                            # A Ruby language server for your editor/IDE
+  gem "spring"                                # Speeds up development by keeping your application running in the background
+  gem "spring-watcher-listen"                 # Use the listen gem to find filesystem changes instead of polling the filesystem
+  gem "traceroute"                            # Find unused routes and unreachable action methods
+  gem "web-console"                           # In-page console by using <% console %> in views or controllers
 end
 
 group :test do
-  gem 'mocha'                                         # stubbing and mocking
-  gem 'rails-controller-testing'                      # allows 'assigns' in controller tests in rails 5
+  gem "capybara"                              # Capybara system testing DSL
+  gem "selenium-webdriver"                    # Run system tests with a Selenium backend
+  gem "simplecov", require: false             # Code test coverage reports
+  gem "webdrivers"                            # Run system tests in Chrome
+  gem "webmock"                               # Prevent remote network connections in tests
 end
 
 group :development, :test do
-  gem 'bootsnap'                                      # load your rails server quicker using bytecode caching and $PATH caching
-  gem 'bullet', '~> 5.6.1'                            # find n+1 queries and unused eager loading
-  gem 'byebug'                                        # a console debugger
-  gem 'dotenv-rails'                                  # load environment variables from .env
-  # gem 'faker', git: 'https://github.com/stympy/faker' # handy library for generating all kinds of fake data
-  gem 'guard'                                         # run custom rules when files or directories are modified
-  gem 'guard-livereload', '~> 2.5.2', require: false  # reload browser when view files are modified (requires LiveReload browser ext.)
-  gem 'guard-minitest'                                # contextually re-run tests when saving test files
+  gem "bullet"                                # Find n+1 queries and unused eager loading
+  gem "factory_bot_rails"                     # Fixtures, but better
+  gem "faker"                                 # Handy library for generating all kinds of fake data
+  gem "guard"                                 # Run custom rules when files or directories are modified
+  gem "guard-livereload", require: false      # Reload browser when view files are modified (requires LiveReload browser ext.)
+  gem "guard-rspec", require: false           # Contextually re-run tests when saving test files
+  gem "pry"                                   # Supercharged IRB replacement
+  gem "pry-byebug"                            # Use pry as a debugger
+  gem "pry-rails"                             # Automatically replace IRB with pry
+  gem "rspec-rails"                           # A better Ruby testing framework
 end
