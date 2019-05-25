@@ -1,4 +1,4 @@
-require_relative 'boot'
+require_relative "boot"
 
 require "rails"
 # Pick the frameworks you want:
@@ -36,16 +36,16 @@ module RailsBamboo
 
     # Configure default Rails generators
     config.generators do |g|
-        # Don't generate scaffold.scss stylesheet
-        g.scaffold_stylesheet false
+      # Don't generate scaffold.scss stylesheet
+      g.scaffold_stylesheet false
 
-        # Don't generate scaffold stylesheets, helpers, or javascripts
-        g.assets false
-        g.helper false
+      # Don't generate scaffold stylesheets, helpers, or javascripts
+      g.assets false
+      g.helper false
 
-        # Use a custom scaffold template engine so we can change things
-        g.template_engine :all
-        g.fallbacks[:all] = :erb
+      # Use a custom scaffold template engine so we can change things
+      g.template_engine :all
+      g.fallbacks[:all] = :erb
     end
   end
 end
