@@ -30,10 +30,12 @@ group :test do
   gem "chromedriver-helper"                           # Run system tests in Chrome
   gem "selenium-webdriver"                            # Run system tests with a Selenium backend
   gem "simplecov", require: false                     # Code test coverage reports
+  gem "webmock"                                       # Prevent remote network connections in tests
 end
 
 group :development, :test do
   gem "bullet"                                        # Find n+1 queries and unused eager loading
+  gem "factory_bot_rails"                             # Fixtures, but better
   gem "faker"                                         # Handy library for generating all kinds of fake data
   gem "guard"                                         # Run custom rules when files or directories are modified
   gem "guard-livereload", require: false              # Reload browser when view files are modified (requires LiveReload browser ext.)
